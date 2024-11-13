@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://loremflickr.com/1000/700/restaurant);">
+    <div class="container">
+      <h1>Add a Review</h1>
+    </div>
+  </div>
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :content %>
+    <%= f.input :rating %>
+    <%= f.submit class: "btn btn-info" %>
+  <% end %>
+</div>

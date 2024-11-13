@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <h1>Restaurants</h1>
+    <%= link_to new_restaurant_path do %>
+      <i class="fa-solid fa-plus"></i>
+    <% end %>
+  </div>
+  <div class="cards">
+  <% @restaurants.each do |restaurant| %>
+    <div class="card-trip">
+      <%= image_tag "https://loremflickr.com/500/300/restaurant,#{restaurant.category}"  %>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= restaurant.name %></h2>
+          <p><%= restaurant.address %></p>
+          <p><%= restaurant.phone_number %></p>
+        </div>
+        <h2 class="card-trip-pricing"><%= restaurant.category %></h2>
+      </div>
+      <%= link_to "", restaurant_path(restaurant), class: "card-trip-link" %>
+    </div>
+  <% end %>
+  </div>
+</div>

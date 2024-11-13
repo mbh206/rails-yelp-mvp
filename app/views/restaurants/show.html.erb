@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://loremflickr.com/1000/700/restaurant,<%= @restaurant.category %>);">
+    <div class="container">
+      <h1><%= @restaurant.name %></h1>
+    </div>
+  </div>
+  <div class="restaurant-page">
+      <p><%= @restaurant.address %></p>
+      <p><%= @restaurant.phone_number %></p>
+      <p><%= @restaurant.category %></p>
+  </div>
+  <%= link_to "Back to home", restaurants_path %>
+  <h2>REVIEWS</h2>
+  <div class="reviews-container">
+    <ul>
+      <% @restaurant.reviews.each do |review| %>
+        <li>
+          <p><%= review.content %></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://loremflickr.com/1000/700/restaurant);">
+    <div class="container">
+      <h1>Add a New Restaurant</h1>
+    </div>
+  </div>
+  <%= simple_form_for @restaurant do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :category, collection: Restaurant::CATEGORIES %>
+    <%= f.submit class: "btn btn-info" %>
+  <% end %>
+</div>
