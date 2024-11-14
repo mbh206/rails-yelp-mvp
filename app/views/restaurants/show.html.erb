@@ -4,18 +4,34 @@
       <h1><%= @restaurant.name %></h1>
     </div>
   </div>
-  <div class="restaurant-page">
-      <p><%= @restaurant.address %></p>
-      <p><%= @restaurant.phone_number %></p>
-      <p><%= @restaurant.category %></p>
+  <div class="restaurant-page d-flex justify-content-between">
+      <h4><%= @restaurant.address %></h4>
+      <h4><%= @restaurant.phone_number %></h4>
+      <h4 class=""><%= @restaurant.category %></h4>
   </div>
-  <%= link_to "Back to home", restaurants_path %>
+  <hr>
   <h2>REVIEWS</h2>
+  <%= link_to new_restaurant_review_path(@restaurant), class: "text-decoration-none review-links" do %>
+        <div class="d-flex gap-2 my-1">
+          <h5>Add Review</h5>
+          <i class="fa-solid fa-plus m-1"></i>
+        </div>
+      <% end %>
   <div class="reviews-container">
-    <ul>
+    <ul class="list-unstyled w-50">
       <% @restaurant.reviews.each do |review| %>
-        <li>
-          <p><%= review.content %></p>
+        <li class="card p-2">
+          <div class="d-flex justify-content-between m-1">
+            <div class="card-subtitle text-muted">
+              <p class="card-text"><%= review.content %></p>
+              <p class="card-title">
+                <% review.rating.times do %>
+                  <i class="fa-solid fa-star"></i>
+                <% end %>
+              </p>
+            </div>
+            <i class="fa-solid fa-trash m-1 text-muted"></i>
+          </div>
         </li>
       <% end %>
     </ul>

@@ -1,18 +1,22 @@
 .navbar-lewagon {
   display: flex;
   justify-content: center;
+  align-items: baseline;
+  color:#44b1b1;
   background: white;
   box-shadow: 1px 1px 5px #d9d9d9;
   padding: 1rem 0;
   margin-bottom: 1rem;
 }
 
-.fa-plus {
+.navbar-icon {
   font-size: 2rem;
+  margin: 0 1rem;
+  color: #44b1b1;
 }
 
-.fa-utensils {
-  font-size: 2rem;
+.fa-star {
+  color: goldenrod;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -125,8 +129,16 @@
 }
 
 .banner p {
-  font-size: 20px;
+  font-size: 40px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.review-links {
+  color:#44b1b1;
+}
+
+.review-links:hover {
+  color:#2f7c7c;
 }

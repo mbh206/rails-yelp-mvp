@@ -13,7 +13,15 @@
 
   <body>
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-            <i class="fa-solid fa-utensils"></i>
+      <div class="navbar-icon">
+        <i class="fa-solid fa-utensils"></i>
+      </div>
+      <h2>Local Spots</h2>
+      <%= link_to restaurants_path do %>
+        <div class="navbar-icon">
+          <i class="fa-solid fa-house"></i>
+        </div>
+      <% end %>
     </div>
     <%= yield %>
   </body>

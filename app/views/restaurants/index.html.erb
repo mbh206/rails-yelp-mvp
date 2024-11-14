@@ -1,9 +1,14 @@
 <div class="container">
   <div class="d-flex justify-content-between">
-    <h1>Restaurants</h1>
-    <%= link_to new_restaurant_path do %>
-      <i class="fa-solid fa-plus"></i>
-    <% end %>
+    <h1>All Restaurants</h1>
+      <%= link_to new_restaurant_path do %>
+        <div class="d-flex text-decoration-none">
+          <h2>Add New</h2>
+          <div class="navbar-icon">
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+      <% end %>
   </div>
   <div class="cards">
   <% @restaurants.each do |restaurant| %>
